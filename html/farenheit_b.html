@@ -3,14 +3,20 @@
 <head>
 	<title>JS listing 3.4 Farenheit</title>
 <script>
-var cTemp = 100;
-var hTemp = ((cTemp * 9)/5) + 32;
+/*  var cTemp = 100;
+    var hTemp = ((cTemp * 9)/5) + 32;
+    */
+
+function convert(c){
+	hTemp = ((c * 9)/5) + 32;
+	document.write(hTemp + "<br />");
+}
 
 </script>
 </head>
 <body>
 	<script type="text/javascript">
-		document.write("the boiling temp of H20 in farenheit is " + hTemp);
+		document.write(convert(100));  
 	</script>
 
 
