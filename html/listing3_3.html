@@ -4,6 +4,17 @@
 	<title>JS Listing 3.3 Global and Local scope</title>
 </head>
 <body>
+	<script type="text/javascript">
+		var a = 10;
+		var b = 10;
+		function showVars(){
+			var a = 22;
+			b = 33;
+			return "Local variable 'a'  = " + a + "\nGlobal variable 'b' = " + b;
+		}
+		var message = showVars();
+		alert(message + "\nGlobal variable 'a' = " + a);
+	</script>
 	
 	
 </body>
