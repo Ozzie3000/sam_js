@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"></meta>
 	<title>Farenheit</title>
 <script>
-var cTemp = 100;
-var hTemp = ((cTemp * 9)/5) + 32;
-
+	var question = prompt("Let me convert Celcius to Farenheit for you.  Enter a number: ");
+	var cTemp = question
+	
+	function convert(question){
+		var fTemp = ((cTemp * 9)/5) + 32;
+		document.write(fTemp);
+	}
 </script>
 </head>
 <body>
 	<script type="text/javascript">
-		document.write("the boiling temp of H20 in farenheit is " + hTemp);
+		
 	</script>
 
 
-
+<input type="button" value="Convert to (F)" onclick="convert()" />
 </body>
 </html>
