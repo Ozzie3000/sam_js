@@ -11,12 +11,18 @@
 			function forward(){
 				history.go(1);
 			}
+			function sP(){
+				history.go(grooveshark.com);
+			}
 
 		</script>
 </head>
 <body>
 	<input type="button" value="Backward" onclick="backward()" />
 	<input type="button" value="Forward" onclick="forward()" />
-	<script type="text/javascript">history.go(1);</script>
+	<br />
+	<p>now go to grooveshark.com  and come back here</p>
+	<input type="button" value="grooveshark" onclick="sP()" />
+
 </body>
 </html>
