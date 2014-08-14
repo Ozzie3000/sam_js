@@ -2,8 +2,16 @@
 <html>
 <head>
 	<title>JS Listing 3.2 calling functions with multiple arguments</title>
+	<script type="text/javascript">
+		function buttonReport(buttonId, buttonName, buttonValue){
+			var userMessage1 = "Button id: " + buttonId + "\n";
+			var userMessage2 = "Button name: " + buttonName + "\n";
+			var userMessage3 = "Button value: " + buttonValue;
+			alert(userMessage1 + userMessage2 + userMessage3);
+		}
+	</script>
 </head>
 <body>
-	
+	<input type="button" id="id1" name="Left side button" value="Left" onclick="buttonReport(this.id, this.name, this.value)" />
 </body>
 </html>
