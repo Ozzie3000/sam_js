@@ -4,7 +4,8 @@
 	<meta charset="utf-8"></meta>
 	<title>JS More Date objects</title>
 	<script type="text/javascript">
-		var basedate = new Date();
+		
+		var basedate = new Date(2014, 9, 24, 3, 1, 1);
 		var year = basedate.getFullYear();
 		var month = basedate.getMonth();
 		var date = basedate.getDate();
@@ -12,11 +13,14 @@
 		var hours = basedate.getHours();
 		var minutes = basedate.getMinutes();
 		var seconds = basedate.getSeconds();
-		
+
+		var da1 = new Date("October 24, 2027 10:24:48")
+		var da2 = new Date("October 24, 2048 10:24:48")	
+		var da3 = new Date("October 24, 2101 10:24:48")
 	</script>
 </head>
 <body>
-	<input type="button" value="Show the time when I first clicked this button" onclick="alert(basedate)">
+	<input type="button" value="Show a future date" onclick="alert(basedate)">
 	<br />
 	<input type="button" value="Show the 	Current full year" onclick="alert(year)">
 	<br />
@@ -32,8 +36,13 @@
 	<br />
 	<input type="button" value="Show the Current second" onclick="alert(seconds)">
 	<br />
-
-
+	<br />
+	<input type="button" value="Show var 1" onclick="alert(da1)">
+	<br />
+	<input type="button" value="Show var 2" onclick="alert(da2)">
+	<br />
+	<input type="button" value="Show var 3" onclick="alert(da3)">
+	<br />
 
 
 
