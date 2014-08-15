@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS location Object navigation</title>
+	<script type="text/javascript">
+			function goog(){
+				location.href = 'http://www.google.com/';
+			}
+			function ama(){
+				location.replace('https://www.amazon.com/');
+			}
+	</script>
+</head>
+<body>
+	<input type="button" value="goog" onclick="javascript:location.href='https://www.google.com/';" />
+	<input type="button" value="Amazon" onclick="javascript:location.replace('https://www.amazon.com/');" />
+	<input type="button" value="Github" onclick="location.href='https://github.com/';" />
+	<input type="button" value="Stackoverflow" onclick="location.replace('https://www.stackoverflow.com/');" />
+	<br /><br />
+	<p>Calling another function within button</p>
+	<input type="button" value="location.href()" onclick="goog()"  />
+	<input type="button" value="location.replace()" onclick="ama()" />	
+
+	<!--  alert options  
+	<script type="text/javascript">
+	alert(pro);
+	alert(location.protocol);
+	</script>
+-->
+</body>
+</html>
