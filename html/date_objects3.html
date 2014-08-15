@@ -4,25 +4,23 @@
 	<meta charset="utf-8"></meta>
 	<title>JS More Date objects 3</title>
 	<script type="text/javascript">
-		
-		var basedate = new Date(2014, 9, 24, 3, 1, 1);
-		var year = basedate.getFullYear();
-		var month = basedate.getMonth();
-		var date = basedate.getDate();
-		var day = basedate.getDay();
-		var hours = basedate.getHours();
-		var minutes = basedate.getMinutes();
-		var seconds = basedate.getSeconds();
+		var adate = new Date();
 
-		var da1 = new Date("October 24, 2027 10:24:48")
-		var da2 = new Date("October 24, 2048 10:24:48")	
-		var da3 = new Date("October 24, 2101 10:24:48")
 	</script>
 </head>
 <body>
-	<input type="button" value="Show a future date" onclick="alert(basedate)">
-	<br />
-	
+	<input type="button" value="Show time when this page was loaded" onclick="alert(adate)">
+	<br /><br />
+
+<script type="text/javascript">
+	document.write("Created: " + adate.toDateString() + " / " + adate.toTimeString() + "							<br />");
+	document.write("<br/>");
+
+	adate.setDate(adate.getDate()+33);
+	document.write("After adding 33 days: " + adate.toDateString() + " / " + adate.toTimeString());
+
+
+</script>	
 
 
 
