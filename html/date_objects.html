@@ -4,11 +4,40 @@
 	<meta charset="utf-8"></meta>
 	<title>JS More Date objects</title>
 	<script type="text/javascript">
+		var basedate = new Date();
+		var year = basedate.getFullYear();
+		var month = basedate.getMonth();
+		var date = basedate.getDate();
+		var day = basedate.getDay();
+		var hours = basedate.getHours();
+		var minutes = basedate.getMinutes();
+		var seconds = basedate.getSeconds();
 		
 	</script>
 </head>
 <body>
-	<input type="button" value="Show the time when I first clicked this button" onclick="">
+	<input type="button" value="Show the time when I first clicked this button" onclick="alert(basedate)">
+	<br />
+	<input type="button" value="Show the 	Current full year" onclick="alert(year)">
+	<br />
+	<input type="button" value="Show the Current month" onclick="alert(month)">
+	<br />
+	<input type="button" value="Show the Current date" onclick="alert(date)">
+	<br />
+	<input type="button" value="Show the Current day" onclick="alert(day)">
+	<br />
+	<input type="button" value="Show the Current hour" onclick="alert(hours)">
+	<br />
+	<input type="button" value="Show the Current minute" onclick="alert(minutes)">
+	<br />
+	<input type="button" value="Show the Current second" onclick="alert(seconds)">
+	<br />
+
+
+
+
+
+
 	<!-- test to see if it works
 	<script type="text/javascript">
 			document.write(mydate);
