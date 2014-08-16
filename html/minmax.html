@@ -7,12 +7,55 @@
 		var ageBob = 23;
 		var ageTal = 27;
 		var ageDean = 31;
-		var ageSam = 19;
-
+		var ageSam = 29;
+		var ageBobby = 100;
+		/*function min(){
+			//document.write("The youngest person is " + Math.min(ageBob, ageTal, ageDean, ageSam) + "years old <br />");
+		}
+		*/
+		with (Math){
+			var aMin = min(ageBob, ageTal, ageDean, ageSam, ageBobby);
+			var aMax = max(ageBob, ageTal, ageDean, ageSam, ageBobby);
+		}
+/*
+		function aGes with(math){
+		var ageBob = 23;
+		var ageTal = 27;
+		var ageDean = 31;
+		var ageSam = 29;
+		var ageBobby = 100;
+		}
+		*/
 	</script>
 </head>
 <body>
-	
+	<p>
+		Bob = 23;
+		Tal = 27;
+		Dean = 31;
+		Sam = 29;
+		Bobby = 100;
+	</p>
+
+	<input type="button" value="Find Minimum" onclick="alert(Math.min(ageBob, ageTal, ageDean, ageSam, ageBobby))" /> Using JS math:
+	<br />
+	<input type="button" value="Find Minimum" onclick="alert(aMin)" /> Using a function call with JS Math inside:
+	<br /><br />
+
+	<input type="button" value="Find Maximum" onclick="alert(Math.max(ageBob, ageTal, ageDean, ageSam, ageBobby))" />Using JS math:
+	<br />
+	<input type="button" value="Find Maximum" onclick="alert(aMax)" />Using a function call with JS Math inside:
+	<br /><br />
+
+<!--
+	<input type="button" value="Find Maximum" onclick="alert(aGes(min))" />Using a function call with JS Math inside:
+	<br /><br />
+-->
+
+<script type="text/javascript">
+	//		document.write("The youngest person is " + Math.min(ageBob, ageTal, ageDean, ageSam) + "years old <br />");
+</script>
+			
 	
 </body>
 </html>
