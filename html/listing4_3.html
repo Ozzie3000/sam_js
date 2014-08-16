@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<style type="text/css">
+		h1{font: 26px normal san-serif;}
+	</style>
+	<script type="text/javascript">
+		var mydate = new Date();
+		function telltimeA(){
+			var outputA ="";
+			var currentA = new Date();
+			outputA += " Date: " + currentA.getDate();
+			outputA += ", Month: " + currentA.getMonth();
+			outputA += ", Year: " + currentA.getFullYear();
+			outputA += ", Hours: " + currentA.getHours();
+			outputA += ", Minutes: " + currentA.getMinutes();
+			outputA += ", Seconds: " + currentA.getSeconds();
+
+			document.getElementById("divA").innerHTML = outputA;
+		}
+
+			function telltimeB(){
+			var outputB ="";
+			var currentB = new Date();
+			outputB += " " + currentB.getDate();
+			outputB += " " + currentB.getMonth();
+			outputB += " " + currentB.getFullYear();
+			outputB += " " + currentB.getHours();
+			outputB += " " + currentB.getMinutes();
+			outputB += " " + currentB.getSeconds();
+			document.getElementById("divB").innerHTML = outputB;
+		}
+	</script>
+	<title>JS Listing 4.3 innerHTML, reload, getElementById</title>
+</head>
+<body>
+	<h1>The current date and time are:</h1>
+	<br />
+	<div id="divA"></div>
+	<br />
+	<div id="divB"></div>
+	<script type="text/javascript">
+		telltimeA();
+		telltimeB(); 
+	</script>
+	<br />
+	<script type="text/javascript">
+		document.write("In one string: " + mydate.toDateString() + " " + mydate.toTimeString()); 
+	</script>
+
+	<br />
+	<input type="button" value="Hit me to Refresh" onclick="location.reload()" />
+	<br />
+
+	
+</body>
+</html>
