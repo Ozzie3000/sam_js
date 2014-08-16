@@ -15,13 +15,19 @@
 			out += "<br />Hours: " + now.getHours();
 			out += "<br />Minutes: " + now.getMinutes();
 			out += "<br />Seconds: " + now.getSeconds();
-			
+			document.getElementById("divA").innerHTML = out;
 		}
 	</script>
 	<title>JS Listing 4.2 innerHTML, reload, getElementById</title>
 </head>
 <body>
-	
+	<h1>The current date and time are:</h1>
+	<br />
+	<div id="divA"></div>
+
+	<script type="text/javascript">telltime();</script>
+	<br />
+	<input type="button" value="Hit me to Refresh" onclick="location.reload()" />
 	
 </body>
 </html>
