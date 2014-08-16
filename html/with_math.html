@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS Math math math</title>
+	<script type="text/javascript">
+		
+		function aRando(i){
+			var i=100;
+			return Math.round(Math.random()*i);
+		}
+		function aWeirdo(i){
+			var i=100;
+			 x = Math.round(Math.random()*i);
+			 x = x -3;
+			 return x;
+		}
+
+
+	</script>
+</head>
+<body>
+	<p>
+		Stuff with Math!		
+	</p>
+		<input type="button" value="Random number 1-100" onclick="alert(aRando())" />Using a function call with JS Math inside:
+	<br /><br />
+			<input type="button" value="Random number 1-100 then i subtract 3" onclick="alert(aWeirdo())" />Using a function call with JS Math inside:
+	<br /><br />
+
+
+<!-- test to see if page is reloading  -->
+<script type="text/javascript">
+	document.write(aWeirdo());
+</script>
+			
+	
+</body>
+</html>
