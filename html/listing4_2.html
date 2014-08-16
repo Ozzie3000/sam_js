@@ -2,6 +2,22 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
+	<style type="text/css">
+		p{font: 16px normal san-serif;}
+	</style>
+	<script type="text/javascript">
+		function telltime(){
+			var out ="";
+			var now = new Date();
+			out += "<br />Date: " + now.getDate();
+			out += "<br />Month: " + now.getMonth();
+			out += "<br />Year: " + now.getFullYear();
+			out += "<br />Hours: " + now.getHours();
+			out += "<br />Minutes: " + now.getMinutes();
+			out += "<br />Seconds: " + now.getSeconds();
+			
+		}
+	</script>
 	<title>JS Listing 4.2 innerHTML, reload, getElementById</title>
 </head>
 <body>
