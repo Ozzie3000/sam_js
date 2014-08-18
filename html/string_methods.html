@@ -11,16 +11,19 @@
 		}
 		function io(){
 			var a = prompt("give me a sentence?");
-			var b = prompt("give me a word from that sentence and I will find it");
+			var b = prompt("give me a word from that sentence and I will find it; where it first occurs; ie like the letter 'a' ");
 			window.alert(a.indexOf(b));
 		}
 		function lio(){
-			var c = prompt("");
-			window.alert();
+			var a = prompt("give me a sentence?");
+			var b = prompt("give me a word from that sentence and I will find it; where it last occurs; ie like the letter 'a' ");
+			window.alert(a.lastIndexOf(b));
 		}
 		function rep(){
-			var c = prompt("");
-			window.alert();
+			var colr = prompt("give me a color")
+			var sent = prompt("give me a sentence with that color?");
+			window.alert("I don't like the color " + colr);
+			window.alert(sent.replace(colr, "Green sea foam"));
 		}
 		function sp(){
 			var c = prompt("");
