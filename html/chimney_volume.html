@@ -39,12 +39,13 @@
 		document.write("<br />");
 
 		function cVolum(r, y){
-		// var cV = (r*r*y);
+		// var cV = (Math.PI*r*r*y);
 	//	document.write(vol);
 		return Math.PI*r*r*y;
 		}
 
 		document.write(cVolum(r, y));
+		document.write("<br />" + "I don't like decimals: "+ Math.round(cVolum(r, y)));
 	</script>
 	
 </body>
