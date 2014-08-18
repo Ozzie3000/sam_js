@@ -26,8 +26,10 @@
 			window.alert(sent.replace(colr, "Green sea foam"));
 		}
 		function sp(){
-			var c = prompt("");
-			window.alert();
+			var a = prompt("give me a sentence. \nPepper it with some dashes \nlike this over-grown. \nI will chop it along the - ");
+			var arayray = new Array;
+			var arayray = a.split("-");
+			window.alert(arayray);
 		}
 		function sub(){
 			var c = prompt("");
@@ -41,8 +43,9 @@
 			var c = prompt("");
 			window.alert();
 		}
-				
-
+	/*			
+		var string1 = "the fast susan not lazy susan";
+		var newArray = string1.split(" ");    */
 	</script>
 </head>
 <body>
@@ -63,18 +66,24 @@
 <hr>
 <br />
 
-<h2></h2>	
-<input type="button" value="concat" onclick="con()" />
+	<h2></h2>	
+	<input type="button" value="concat" onclick="con()" />
 
-<input type="button" value="indexOf" onclick="io()" />
+	<input type="button" value="indexOf" onclick="io()" />
 
-<input type="button" value="lastIndexOf" onclick="lio()" />
+	<input type="button" value="lastIndexOf" onclick="lio()" />
 
-<input type="button" value="replace" onclick="rep()" />
-<input type="button" value="split" onclick="sp()" />
-<input type="button" value="substring" onclick="sub()" />
-<input type="button" value="toLowerCase" onclick="tlc()" />
-<input type="button" value="toUpperCase" onclick="tuc()" />
-	
+	<input type="button" value="replace" onclick="rep()" />
+	<input type="button" value="split" onclick="sp()" />
+	<input type="button" value="substring" onclick="sub()" />
+	<input type="button" value="toLowerCase" onclick="tlc()" />
+	<input type="button" value="toUpperCase" onclick="tuc()" />
+
+<!--  test code
+	<script type="text/javascript">
+		document.write(newArray);
+	</script>	
+-->
+
 </body>
 </html>
