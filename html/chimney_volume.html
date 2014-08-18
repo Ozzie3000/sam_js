@@ -3,9 +3,49 @@
 <head>
 	<meta charset="utf-8"></meta>
 	<title>JS Volume of a chimney</title>
+	<script type="text/ja*vascript">
+		function cVolum(ra){
+		// var vol = (ra * ra * ht);
+	//	document.write(vol);
+		return ra*ra;
+		}
+
+		//promp later
+		function cholo(){
+			var bab = 5;
+			var cab = 7;
+			return bab*cab;
+		}
+	</script>
 </head>
 <body>
-	
+	<h1>Lets find the Volume of a chimney</h1>
+	<input type="button" value="Volume" onclick="alert(cVolum(r,y))" />
+	<br /><br />
+	<input type="button" value="Refresh page" onclick="location.reload()" />
+	<br /><br />
+
+	<script type="text/javascript">
+		var y = prompt("height");
+		var r = prompt("radius");
+		//alert("yo yo yo");
+		//document.write("<br />" + cVolum(3,3));
+		//y = parseInt(y);
+		//r = parseInt(r);
+		document.write("<br />height is: " + y);
+		document.write("<br />radius is: " + r);
+		document.write("<br />The volume of the chimney is: " );
+		
+		document.write("<br />");
+
+		function cVolum(r, y){
+		// var cV = (r*r*y);
+	//	document.write(vol);
+		return Math.PI*r*r*y;
+		}
+
+		document.write(cVolum(r, y));
+	</script>
 	
 </body>
 </html>
