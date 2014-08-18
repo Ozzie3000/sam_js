@@ -4,12 +4,70 @@
 	<meta charset="utf-8"></meta>
 	<title>JS Boolean; or is i binary?</title>
 	<script type="text/javascript">
+		/*
+		function ask(){
+			var answer = confirm("May we continue?");
+			window.alert(answer*1);			
+		}
+		*/
 		
+			var answer = confirm("May we continue?");
+			window.alert(answer*1);
+		
+/*
+		function tell(a, answer)){
+			//var answer;
+			if (answer == true){
+				document.getElementById("res").innerHTML="here is what I gathered from your response: Sweet.  I like the spirit!";
+			}else{				
+				document.getElementById("res").innerHTML="here is what I gathered from your response: Cancel is for newbs.";
+			}
+		}
+*/
+		function tellio(y){
+			var response;
+			if (answer == true){
+				response = "here is what I gathered from your response: Sweet.  I like the spirit!";
+			}else{				
+				response = "here is what I gathered from your response: Cancel is for newbs.";
+			}
+			document.getElementById("res").innerHTML = response;
+		}
+
 	</script>
 </head>
 <body>
+	<script type="text/javascript">
+	// document.getElementById("res").innerHTML=tell();
+	/*
+		var answer = confirm("May we continue?");
+		window.alert(answer*1);
+		var y = answer;
+
+		if (answer == 0){
+			document.getElementById("res").innerHTML=("here is what I gathered from your response: Cancel is for newbs.");
+		}else{
+			document.getElementById("res").innerHTML=("here is what I gathered from your response: Sweet.  I like the spirit!");
+			}
+			*/
+	</script>
+
+
 	<h1>Boolean or is it binary.  Those 1's and 0's trip me up.</h1>
-	
-	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+
+	<input type="button" value="F5" onclick="location.reload()" />
+<hr>
+<br /> <!--
+	<input type="button" value="ask" onclick="answer" />
+<br />
+	<input type="button" value="tell" onclick="tell()" />   -->
+	<br />
+	<input type="button" value="tellio" onclick="tellio()" />
+
+<br /><br />
+	<p id="res">Waiting for response.</p>
+
+
 </body>
 </html>
