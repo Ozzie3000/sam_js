@@ -10,8 +10,9 @@
 			window.alert(a.concat(" " + b));
 		}
 		function io(){
-			var c = prompt("");
-			window.alert();
+			var a = prompt("give me a sentence?");
+			var b = prompt("give me a word from that sentence and I will find it");
+			window.alert(a.indexOf(b));
 		}
 		function lio(){
 			var c = prompt("");
@@ -62,17 +63,15 @@
 <h2></h2>	
 <input type="button" value="concat" onclick="con()" />
 
-<input type="button" value="" onclick="" />
+<input type="button" value="indexOf" onclick="io()" />
 
-<input type="button" value="" onclick="" />
+<input type="button" value="lastIndexOf" onclick="lio()" />
 
-<input type="button" value="" onclick="" />
-<input type="button" value="" onclick="" />
-<input type="button" value="" onclick="" />
-<input type="button" value="" onclick="" />
-<input type="button" value="" onclick="" />
-<input type="button" value="" onclick="" />z
-<input type="button" value="" onclick="" />
+<input type="button" value="replace" onclick="rep()" />
+<input type="button" value="split" onclick="sp()" />
+<input type="button" value="substring" onclick="sub()" />
+<input type="button" value="toLowerCase" onclick="tlc()" />
+<input type="button" value="toUpperCase" onclick="tuc()" />
 	
 </body>
 </html>
