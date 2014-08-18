@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS Array methods</title>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<h1>Array methods baby</h1>
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+		<input type="button" value="F5" onclick="location.reload()" />
+		<hr>
+
+	<h3></h3>
+
+
+	<script type="text/javascript">
+		var aArray = new Array();
+		//  or
+		var bArray = [];
+
+		aArray[0] = "Monday";
+		aArray[1] = "Tuesday";
+		aArray[2] = "Wednesday";
+		// aArray.length;  how many items.  The problem with length is that you can have empty indices
+
+		var bArray = ["Thursday", "Friday"];
+		cArray = aArray.concat(bArray);
+		myArray = cArray;
+		myArray.splice(5, 0, ["Saturday", "Sunday"]);
+	</script>
+	<input type="button" value="aArray" onclick="alert(aArray)" />
+	<input type="button" value="bArray" onclick="alert(bArray)" />
+	<br /><br />
+	<input type="button" value="aArray length" onclick="alert(aArray.length)" />
+	<input type="button" value="bArray length" onclick="alert(aArray.length)" />
+	<br /><br />
+	<h3>aArray mostly, but sometimes b mixed in</h3>
+	<input type="button" value="concat" onclick="alert(aArray.concat(bArray))" />
+	<input type="button" value="join" onclick="alert(aArray.join('') + '\n:now a single string')" />
+	<input type="button" value="toString" onclick="alert(aArray.toString())" />
+	<input type="button" value="indexOf" onclick="alert(aArray.indexOf('Tuesday') + ' \n: index for tuesday')" />
+	<input type="button" value="lastIndexOf" onclick="alert(aArray.lastIndexOf('Tuesday') + ' \n: last index tuesday occurs in')" />
+	<input type="button" value="slice" onclick="alert(cArray.slice(1, 3))" />
+	<input type="button" value="sort" onclick="alert(cArray.sort() + '\n: Alpha order')" />
+	<input type="button" value="cArray" onclick="alert(cArray)" />
+	<input type="button" value="myArray" onclick="alert(myArray)" />
+	
+	
+
+
+</body>
+</html>
