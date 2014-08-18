@@ -4,11 +4,30 @@
 	<meta charset="utf-8"></meta>
 	<title>JS parseFloat, and parseInt functions</title>
 	<script type="text/javascript">
-		
+		function inte(){
+			var i = prompt("Yo buddy give me some numbers with a decimal in it");
+			window.alert(parseInt(i, 10));
+		}
+
+		function flo(){
+			var f = prompt("Yo buddy give me some numbers with a decimal in it" + "\nlike 32.7 beers or 2.9 chuckles");
+			window.alert(parseFloat(f));
+		}
+
 	</script>
 </head>
 <body>
+	<h1>parseInt() and parseFloat()</h1>
+
+	<h2>Taking arguments with decimals and converting to whole numbers</h2>
+	<input type="button" value="whole integer" onclick="inte()" />
 	
-	
+	<h2>Taking arguments with decimals or numbers followed by letters and converting to floating integers</h2>
+	<input type="button" value="a float" onclick="flo()" />	
+
+<br /><br />
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+
 </body>
 </html>
