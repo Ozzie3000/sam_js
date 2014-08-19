@@ -2,17 +2,30 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
-	<title>JS Listing 5.2</title>
+	<title>JS Listing 5.1 array manipulation</title>
 	<script type="text/javascript">
+		function wrangleArray(){
+			var sentence = prompt("Why is politcs the devil?");
+			var newSentence = "";
+			document.getElementById("div1").innerHTML ="<p>" + sentence + "</p>";
+			var words = sentence.split(" ");
+			var message = words.splice(3,2,["blah", " blah", "blah"]);
+			window.alert('Removed words: ' + message);
+			document.getElementById("div2").innerHTML ="<p>" + words.join(" ") + "</p>";
+			document.getElementById("div3").innerHTML ="<p>" + sentence + " something or other " + message.join(" ") + " " + sentence.concat(" " + message)+ " ...I think i'm drunk..." + "</p>";
+		}
 
 	</script>
 </head>
 <body>
-	<h1>more practice</h1>
+	<h1>Strings and Arrays</h1>
 		<h3>a refresh button because i'm lazy.... ha ha</h3>
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
-	
-	
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+
+	<script type="text/javascript">wrangleArray();</script>
 </body>
 </html>
