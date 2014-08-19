@@ -4,7 +4,12 @@
 	<meta charset="utf-8"></meta>
 	<title>JS basica boolean</title>
 	<script type="text/javascript">
-
+		var testSubj = "";
+		var jakoob = true;
+		if(jakoob) testSubj = "Winner winner...true true";
+		function show(){
+			document.getElementById("mer").innerHTML = testSubj;
+		}
 	</script>
 </head>
 <body>
@@ -12,7 +17,7 @@
 		<h3>a refresh button because i'm lazy.... ha ha</h3>
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
-	
-	
+	<p id="mer"></p>
+	<script type="text/javascript">show();</script>
 </body>
 </html>
