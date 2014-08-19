@@ -4,15 +4,26 @@
 	<meta charset="utf-8"></meta>
 	<title>JS Listing 5.1 array manipulation</title>
 	<script type="text/javascript">
+		function wrangleArray(){
+			var sentence = "javascript is a freaking awesome language";
+			var newSentence = "";
+			document.getElementById("div1").innerHTML ="<p>" + sentence + "</p>";
+			var words = sentence.split(" ");
+			var message = words.splice(3,2,["sweet", " sweet"]);
+			window.alert('Removed words: ' + message);
+			document.getElementById("div2").innerHTML ="<p>" + words.join(" ") + "</p>";
+		}
 
 	</script>
 </head>
 <body>
-	<h1></h1>
+	<h1>Strings and Arrays</h1>
 		<h3>a refresh button because i'm lazy.... ha ha</h3>
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
-	
-	
+	<div id="div1"></div>
+	<div id="div2"></div>
+
+	<script type="text/javascript">wrangleArray();</script>
 </body>
 </html>
