@@ -7,8 +7,14 @@
 		var testSubj = "";
 		var jakoob = true;
 		if(jakoob) testSubj = "Winner winner...true true";
+		var testSubjB ="";
+		var jabajaba = false;
+		if(!jabajaba) testSubjB = "oh oh, we have a False";
 		function show(){
 			document.getElementById("mer").innerHTML = testSubj;
+		}
+		function neg(){
+			document.getElementById("ber").innerHTML = testSubjB;
 		}
 	</script>
 </head>
@@ -18,6 +24,10 @@
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
 	<p id="mer"></p>
+	<br />
+	<p id="ber"></p>
 	<script type="text/javascript">show();</script>
+	<br />
+	<script type="text/javascript">neg();</script>
 </body>
 </html>
