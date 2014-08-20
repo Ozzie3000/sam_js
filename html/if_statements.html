@@ -4,14 +4,36 @@
 	<meta charset="utf-8"></meta>
 	<title>JS if statements</title>
 	<script type="text/javascript">
+	function temp(temperature){
+		var temperature = prompt("What is the temp in here?");
 
+		if(temperature < 60){
+			message = "Please turn on the hot air";
+			furnaceStatus = "on";
+			acStatus = "off";
+			alert(message);
+		} else if(temperature > 72){
+			message = "Please turn on the a/c";
+			furnaceStatus = "off";
+			acStatus = "on";
+			alert(message);
+		} else{
+			message = "temperature is just right";
+			furnaceStatus = "off";
+			acStatus = "off";
+			alert(message);
+		}
+	}
+		//temp(71);
 	</script>
 </head>
 <body>
-	<h1></h1>
+	<h1>if statements</h1>
 		<h3>a refresh button because i'm lazy.... ha ha</h3>
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
+	<br />
+		<input type="button" value="temp" onclick="temp()" />	
 	
 	
 </body>
