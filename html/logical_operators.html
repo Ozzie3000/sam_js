@@ -4,7 +4,7 @@
 	<meta charset="utf-8"></meta>
 	<title>JS logical operators</title>
 	<script type="text/javascript">
-		function temp(){
+		function tempA(){
 			var temperature = prompt("What is the temp in here?");
 
 			if(temperature >= 60 && temperature <=74){
@@ -12,6 +12,18 @@
 				alert(message);
 			} else {
 				message = "It's either too hot or too cold right now.";
+				alert(message);
+			}
+		}
+
+		function tempB(){
+			var temperature = prompt("What is the temp in here?");
+
+			if(temperature < 60 || temperature > 74){
+				message = "It's either too hot or too cold right now.";
+				alert(message);
+			} else {
+				message = "temperature is just right";
 				alert(message);
 			}
 		}
@@ -23,7 +35,9 @@
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
 	<br />
-		<input type="button" value="temp" onclick="temp()" />	
+		<input type="button" value="temp w/ &&" onclick="tempA()" />
+	<br />
+		<input type="button" value="temp w/ ||" onclick="tempB()" />	
 	
 </body>
 </html>
