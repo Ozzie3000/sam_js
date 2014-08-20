@@ -2,17 +2,42 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
-	<title>JS Listing _</title>
+	<title>JS switch statement</title>
 	<script type="text/javascript">
+		//var color = prompt("Green, Yellow, or Red?")
 
+		function light(color){
+			switch(color){
+				case "red" :
+					message = "stop red light!";
+					alert(message);
+					break;
+				case "yellow" :
+					message = "yellow light; be careful!";
+					alert(message);
+					break;
+				case "green" :
+					message = "green light go go go!";
+					alert(message);
+					break;
+				default :
+					message = "The traffic light must not be working.  Treat it as a 4-way stop.";
+					alert(message);
+			}
+		}
 	</script>
 </head>
 <body>
-	<h1></h1>
+	<h1>Switch statement</h1>
 		<h3>a refresh button because i'm lazy.... ha ha</h3>
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
-	
-	
+		<input type="button" value="Green" onclick="light('green')" />	
+		<br />
+		<input type="button" value="Yellow" onclick="light('yellow')" />	
+		<br />
+		<input type="button" value="Red" onclick="light('red')" />	
+		<br />
+		<input type="button" value="flashing or not on" onclick="light('off')" />
 </body>
 </html>
