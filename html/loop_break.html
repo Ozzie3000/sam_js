@@ -5,8 +5,14 @@
 	<title>JS loop with built in break</title>
 	<script type="text/javascript">
 		function loopIt(){
-			var count = 10;
-
+			var counter = 10;
+			var sum = 0;
+			while(counter > 0){
+				sum = sum + counter;
+				if(sum >42) break;
+				counter--;
+			}
+			alert(sum);
 		}
 	</script>
 </head>
