@@ -5,7 +5,20 @@
 	<title>JS loops and control</title>
 	<script type="text/javascript">
 		function loopIt(){
-				}
+			var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+			var message = "";
+			for (i in days){
+				message += 'Day ' + i + ' is ' + days[i] + '\n';
+			}
+			alert(message);
+		}
+
+		var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+		var message = "";
+		for (i in days){
+			message += 'Day ' + i + ' is ' + days[i] + '\n';
+		}
+		alert(message);
 	</script>
 </head>
 <body>
@@ -14,7 +27,7 @@
 		<input type="button" value="F5" onclick="location.reload()" />
 		<hr>
 		<br />
-		<input type="button" value="Loop w/ break" onclick="loopIt()" />
+		<input type="button" value="Loop w/ control" onclick="loopIt()" />
 	
 </body>
 </html>
