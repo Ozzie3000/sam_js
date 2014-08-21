@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS for loop</title>
+	<script type="text/javascript">
+		function foFo(){
+			var count = 0;
+			do{
+				document.getElementById('heh').innerHTML = "I " + "<br />" + count;
+				count ++;
+			} while (count < 10);
+		}
+	</script>
+</head>
+<body>
+	<h1>for loop</h1>
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="For loop" onclick="foFo()" />
+	<br />
+	<p id="heh"></p>
+
+</body>
+</html>
