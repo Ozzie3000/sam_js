@@ -4,15 +4,22 @@
 	<meta charset="utf-8"></meta>
 	<title>JS 6.2 errors</title>
 	<script type="text/javascript">
-
+		function function_name (argument) {
+			alert("Hello ");
+		}
 	</script>
 </head>
 <body>
 	<h1>Watch out for those errors and typos</h1>
-		<h3>a refresh button because i'm lazy.... ha ha</h3>
-		<input type="button" value="F5" onclick="location.reload()" />
-		<hr>
 	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+
+	<input type="button" value="using right name" onclick="function_name()" />
+	<br />
+		<input type="button" value="using wrong name" onclick="funcion_Name()" />
 	
 </body>
 </html>
