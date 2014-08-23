@@ -4,7 +4,15 @@
 	<meta charset="utf-8"></meta>
 	<title>JS object creation</title>
 	<script type="text/javascript">
-
+		aObjectA = new Object();
+		aObjectA.info ="I am brand new to this world!";
+		function infoPopUp(){
+			window.alert(this.info);
+			// will be blank if not used or associated with something
+		};
+		aObjectA.showInfo = infoPopUp;
+	//	aObjectA.showInfo();
+		
 	</script>
 </head>
 <body>
@@ -13,6 +21,8 @@
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
+	<br />
+	<input type="button" value="show func associated w/ me" onclick="aObjectA.showInfo()" />
 	<br />
 	
 </body>
