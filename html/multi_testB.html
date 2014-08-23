@@ -6,14 +6,16 @@
 	<script type="text/javascript">
 		var pixxies = ["../assets/images/IMG_0050.PNG", "../assets/images/PreviewWellImage.jpg", "../assets/images/viper_black.jpeg"];
 		var counter = 0;
-	//	function getNums(){
+		function getNums(callback){
 			var min = prompt("give me a whole number between 2 and 5");
 			var low = min*1000;
 			var max = prompt("give me a whole number between 6 and 10");
 			var high = max*1000;
-	//		return low;
-	//		return high;
-	//	}
+		//	return low;
+		//	return high;
+			callback(low);
+			callback(high);
+		}
 		function randomIntFromInterval(min,max){
     	return Math.floor(Math.random()*(high-low+1)+low);
 		}
