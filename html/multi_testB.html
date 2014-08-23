@@ -5,28 +5,40 @@
 	<title>JS onLoad, setInterval</title>
 	<script type="text/javascript">
 		var pixxies = ["../assets/images/IMG_0050.PNG", "../assets/images/PreviewWellImage.jpg", "../assets/images/viper_black.jpeg"];
-		var counter = 0;
-		function getNums(callback){
+
+		function getNumsA(){
 			var min = prompt("give me a whole number between 2 and 5");
 			var low = min*1000;
+			return low;
+		}
+		function getNumsB(){
 			var max = prompt("give me a whole number between 6 and 10");
 			var high = max*1000;
-		//	return low;
-		//	return high;
-			callback(low);
-			callback(high);
+			return high;
 		}
 		function randomIntFromInterval(min,max){
+			var low = getNumsA();
+			var high = getNumsB();
     	return Math.floor(Math.random()*(high-low+1)+low);
 		}
-		function goGogo(){
-			setInterval(funkyFunk, randomIntFromInterval(low, high));
-		}
 		function funkyFunk(){
+			/*var counter = 0;
+			counter++;
+			if (counter==pixxies.length) {
+				counter = 0;
+			} else{
+				document.getElementById("pix").src = pixxies[counter];
+			}
+			*/
 			counter++;
 			if(counter == pixxies.length) counter =0;
 			document.getElementById("pix").src = pixxies[counter];
 		}
+		function goGogo(){
+			setInterval(funkyFunk, randomIntFromInterval());
+		}
+		var counter = 0;    // move this inside a function
+		
 	</script>
 </head>
 <body>
@@ -38,14 +50,18 @@
 	<br />
 	<img id="pix" alt="pix" src="../assets/images/IMG_0050.PNG"  height="250px" />
 	<br />
-
-	<input type="button" value="getNums" onclick="getNums()" />
+<!--  no longer need these buttons.  Rolled function return from one to the next  
+	<input type="button" value="getNumsA" onclick="getNumsA()" />
+	<br />
+		<input type="button" value="getNumsB" onclick="getNumsB()" />
 	<br />
 	<input type="button" value="randomIntFromInterval" onclick="randomIntFromInterval()" />
 	<br />
-	<input type="button" value="goGOgo" onclick="goGogo()" />
-	<br />
 	<input type="button" value="funkyFunk" onclick="funkyFunk()" />
 	<br />
+-->
+	<input type="button" value="Give me a time interval" onclick="goGogo()" />
+	<br />
+	
 </body>
 </html>
