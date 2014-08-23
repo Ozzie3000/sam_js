@@ -4,10 +4,18 @@
 	<meta charset="utf-8"></meta>
 	<title>JS 6.3 A banner rotator</title>
 	<script type="text/javascript">
-
+		var banners = ["../assets/images/IMG_0050.PNG", "../assets/images/PreviewWellImage.jpg", "../assets/images/viper_black.jpeg"];
+		var counter = 0;
+		function run(){
+			setInterval(cycle, 2000);
+		}
+		function cycle(){
+			if(counter == banners.length) counter = 0;
+			document.getElementById("banner").src = banners[counter];
+		}
 	</script>
 </head>
-<body>
+<body onload = "run();">
 	<h1>Banner cycler</h1>
 	
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
