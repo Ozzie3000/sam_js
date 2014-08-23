@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS object creation an Anons</title>
+	<script type="text/javascript">
+		aObjectA = new Object();
+		aObjectA.info ="I am brand new to this world!";
+		aObjectA.showInfo = function(){
+			window.alert(this.info);
+		}		
+	</script>
+</head>
+<body>
+	<h1>Object creation with Anonymous assistance</h1>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="show func associated w/ me" onclick="aObjectA.showInfo()" />
+	<br />
+	<p>None working buttons on their own </p>
+	<input type="button" value="infoPopup" onclick="infoPopUp()" />
+	<br />
+	<input type="button" value="rogue.  not associated with anything" onclick="showInfo()" />
+	<br />
+	
+</body>
+</html>
