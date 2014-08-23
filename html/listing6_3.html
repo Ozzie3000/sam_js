@@ -10,6 +10,7 @@
 			setInterval(cycle, 2000);
 		}
 		function cycle(){
+			counter++;
 			if(counter == banners.length) counter = 0;
 			document.getElementById("banner").src = banners[counter];
 		}
@@ -22,6 +23,6 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	
+	<img id="banner" alt="banner" src="../assets/images/IMG_0050.PNG"  height="250px" />
 </body>
 </html>
