@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS Using Constructor function arguments</title>
+	<script type="text/javascript">
+		function Person(personName){
+			this.name = personName;
+			this.info = "I am often called " + this.name;
+			this.showInfo = function(){
+				window.alert(this.info);
+			}
+			this.setInfo = function(newInfo){
+				this.info = newInfo;
+			}
+		}
+		var person1 = new Person("Adam");
+		var person2 = new Person("Eve");
+	</script>
+</head>
+<body>
+	<h2>JS Using Constructor function arguments</h2>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="show function person1" onclick="person1.showInfo()" />
+	<br />
+	<input type="button" value="show function person2" onclick="person2.showInfo()" />
+	<br />
+	<input type="button" value="change info function person2" onclick="person2.setInfo('But, you may call me Lady Aragon!')" />
+	<br />
+	<input type="button" value="show info function person2" onclick="person2.showInfo()" />
+</body>
+</html>
