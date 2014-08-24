@@ -4,7 +4,24 @@
 	<meta charset="utf-8"></meta>
 	<title>JS Listing 7.3 Adding a New Method with prototype</title>
 	<script type="text/javascript">
-
+		function Person(personName){
+			this.name = personName;
+			this.info = "This person is called " + this.name;
+			this.showInfo = function(){
+				window.alert(this.info);
+			}
+		}
+		var person1 = new Person("Adam");
+		var person2 = new Person("Eve");
+		/*
+		class_name.prototype.method_name = function(first_argument) {
+			// body...
+		};
+		*/
+		Person.prototype.sayHello = function(){
+			window.alert(this.name + " says hello");
+		}
+		
 	</script>
 </head>
 <body>
@@ -14,6 +31,17 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	
+
+	<input type="button" value="Show info on Adam" onclick="person1.showInfo()" />
+	<br />
+	<input type="button" value="Show info on Eve" onclick="person2.showInfo()" />
+	<br />
+	<input type="button" value="Say Hello Adam" onclick="person1.sayHello()" />
+	<br />
+	<input type="button" value="Say Hello Eve" onclick="person2.sayHello()" />
+	<br />
+
+
+
 </body>
 </html>
