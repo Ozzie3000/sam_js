@@ -4,15 +4,18 @@
 	<meta charset="utf-8"></meta>
 	<title>JS constructor function</title>
 	<script type="text/javascript">
-		function Car(Color, Year, Make, Miles){
-			this.Color = Color;
-			this.Year = Year;
-			this.Make = Make;
+		function Car(Color, Year, Make, Model, Miles){
+			this.color = Color;
+			this.year = Year;
+			this.make = Make;
+			this.model = Model;
 			this.odometerReading = Miles;
 			this.setOdometer = function(newMiles){
 				this.odometerReading = newMiles;
 			}
 		}
+		var car1 = new Car("blue", "1969", "Chevrolet", "Corvette Stingray", "69,000");
+		var car2 = new Car("yellow", "2015", "Dodge", "Venom", "3");
 	</script>
 </head>
 <body>
@@ -22,6 +25,22 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	
+	<input type="button" value="show car 1 info" onclick="alert(car1.color + ' '+car1.year + ' ' + car1.make + ' ' + car1.model + ' ' + car1.odometerReading)" />
+	<input type="button" value="car 1 color" onclick="alert(car1.color)" />
+	<input type="button" value="car 1 year" onclick="alert(car1.year)" />
+	<input type="button" value="car 1 make" onclick="alert(car1.make)" />
+	<input type="button" value="car 1 model" onclick="alert(car1.model)" />
+	<input type="button" value="car 1 odometer" onclick="alert(car1.odometerReading)" />
+	<input type="button" value="show car 1" onclick="alert(car1.year)" />
+
+	<br/><br />
+
+	<input type="button" value="show car 2 info" onclick="alert(car2.color + ' '+car2.year + ' ' + car2.make + ' ' + car2.model + ' ' + car2.odometerReading)" />
+	<input type="button" value="car 2 color" onclick="alert(car2.color)" />
+	<input type="button" value="car 2 year" onclick="alert(car2.year)" />
+	<input type="button" value="car 2 make" onclick="alert(car2.make)" />
+	<input type="button" value="car 2 model" onclick="alert(car2.model)" />
+	<input type="button" value="car 2 odometer" onclick="alert(car2.odometerReading)" />
+	<input type="button" value="show car 2" onclick="alert(car1.year)" />
 </body>
 </html>
