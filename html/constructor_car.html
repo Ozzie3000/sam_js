@@ -4,7 +4,15 @@
 	<meta charset="utf-8"></meta>
 	<title>JS constructor function</title>
 	<script type="text/javascript">
-
+		function Car(Color, Year, Make, Miles){
+			this.Color = Color;
+			this.Year = Year;
+			this.Make = Make;
+			this.odometerReading = Miles;
+			this.setOdometer = function(newMiles){
+				this.odometerReading = newMiles;
+			}
+		}
 	</script>
 </head>
 <body>
