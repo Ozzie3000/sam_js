@@ -4,9 +4,17 @@
 	<meta charset="utf-8"></meta>
 	<title>JS Constructor function</title>
 	<script type="text/javascript">
-		function yoObjectType(){
-			this.info = "I am brand new to this world!  Object of your affection"
+		function theObjectType(){
+			this.info = "I am brand new to this world!  Object of your affection";
+			this.showInfo = function(){
+				window.alert(this.info);
+			}
+			this.setInfo = function(newInfo){
+				this.info = newInfo;
+			}
 		}
+		var oType1 = new theObjectType();
+		var oType2 = new theObjectType();
 	</script>
 </head>
 <body>
@@ -16,6 +24,9 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
+	<input type="button" value="show function oType1" onclick="oType1.showInfo()" />
+	<br />
+	<input type="button" value="show function oType2" onclick="oType2.showInfo()" />
 	
 </body>
 </html>
