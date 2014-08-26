@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
-	<title>JS Extending the string object. Check to see if palindrom</title>
+	<title>JS Extending the string object. Check to see if palindrome</title>
 	<script type="text/javascript">
 	/*	class_name.prototype.method_name = function(first_argument) {
 			// body...
@@ -16,29 +16,33 @@
 			}
 			return out;
 		}
-		function getStuff(arg){
-			var inString = prompt("Enter your test string here:");
-			document.getElementById("yoyoyo").innerHTML = inString.backwards();
-		//	document.write(inString.backwards());
-		}
+		//function getStuff(){
+			var response = prompt("Enter your test string here:");
+			//document.getElementById("yoyoyo").innerHTML = inString.backwards();
+			var resBack = response.backwards();
+		//}
 		function checker(){
-			if(){
-				// code
-				else
+			//var response = getStuff();
+			if(response == resBack){
+				answer = "We have a winner!  palindrome";
+			}	else{
+				answer = "Nice try boy-o.  Try a different word or phrase";
 			}
+			document.getElementById("chubbyChecker").innerHTML = answer;
 		}
 	</script>
 </head>
 <body>
-	<h1>Extending the string object. Backwards strings. Check to see if palindrom</h1>
+	<h1>Extending the string object. Backwards strings. Check to see if palindrome</h1>
 	
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	<input type="button" value="Click me to run" onclick="getStuff()" />
+	<input type="button" value="Check to see if we have a Palindrome" onclick="checker()" />
 	<br />
-
 	<h3 id="yoyoyo"></h3>
+	<br />
+	<h3 id="chubbyChecker"></h3>
 </body>
 </html>
