@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS Extending the string object. Check to see if palindrom</title>
+	<script type="text/javascript">
+	/*	class_name.prototype.method_name = function(first_argument) {
+			// body...
+		};
+		*/
+
+		String.prototype.backwards = function(){
+			var out = '';
+			for(var i = this.length-1; i>-1; i--){
+				out += this.substr(i, 1);
+			}
+			return out;
+		}
+		function getStuff(arg){
+			var inString = prompt("Enter your test string here:");
+			document.getElementById("yoyoyo").innerHTML = inString.backwards();
+		//	document.write(inString.backwards());
+		}
+		function checker(){
+			if(){
+				// code
+				else
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Extending the string object. Backwards strings. Check to see if palindrom</h1>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="Click me to run" onclick="getStuff()" />
+	<br />
+
+	<h3 id="yoyoyo"></h3>
+</body>
+</html>
