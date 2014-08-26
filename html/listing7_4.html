@@ -4,11 +4,20 @@
 	<meta charset="utf-8"></meta>
 	<title>JS listing 7.4 Extending the string object</title>
 	<script type="text/javascript">
-
+		class_name.prototype.method_name = function(first_argument) {
+			// body...
+		};
+		String.prototype.backwards = function(){
+			var out = '';
+			for(var i = this.length-1; i>=0; i--){
+				out += this.substr(i, 1);
+			}
+			return out;
+		}
 	</script>
 </head>
 <body>
-	<h1>Extending the string object</h1>
+	<h1>Extending the string object. Backwards string.</h1>
 	
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
 	<input type="button" value="F5" onclick="location.reload()" />
