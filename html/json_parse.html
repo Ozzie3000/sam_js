@@ -4,6 +4,13 @@
 	<meta charset="utf-8"></meta>
 	<title>JS JSON parse</title>
 	<script type="text/javascript">
+		var bethany = '{ "height":1.9, "age":30, "eye_color":"yellow" }';
+		var anObject = JSON.parse(bethany);
+		var out = "";
+		// cannot just alert(out until we piece it back together in a string)
+		for (i in anObject){
+			out += i + " = " + anObject[i] + "\n";
+		}
 
 	</script>
 </head>
@@ -14,7 +21,35 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	
-	
+	<textfield>in order to alert the parse you have to iterate through object and capture param and value</textfield><br /><br />
+	<textfield>var bethany = '{ "height":1.9, "age":30, "eye_color":"yellow" }';</textfield><br />
+	<textfield>var out = "";
+		<br />//cannot just alert(out until we piece it back together in a string)//<br />
+		for (i in anObject){
+			out += i + " = " + anObject[i] + "\n";
+		}
+	</textfield><br />
+
+	<input type="button" value="var out" onclick="alert(out)" />
+	<br />
+	<input type="button" value="show bethany" onclick="alert(bethany)" />
+	<br />
+	<input type="button" value="show value for index 0 anObject w/ parse" onclick="alert(anObject.height)" />
+	<br />
+
+
+
+	<p id="demo"></p>
+
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}'
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML =
+obj.name + "<br>" +
+obj.street + "<br>" +
+obj.phone;
+</script>
 </body>
 </html>
