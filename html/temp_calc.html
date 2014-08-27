@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>Farenheit or Celcius converter</title>
+<script>
+	function getFarenheit(c){
+		this.fTemp = prompt("Let me convert Farenheit to Celcius to for you.  Enter a number: ");
+		return fTemp;
+		//this.fTemp = c;
+	}
+	function getCelcius(c){
+		this.cTemp = prompt("Let me convert Celcius to Farenheit for you.  Enter a number: ");
+		return cTemp;
+		//this.cTemp = c;
+	}
+	function convert_toF(cTemp){
+		this.fTemp = ((cTemp * 9)/5) + 32;
+		//return fTemp;
+		alert(fTemp);
+	}
+	function convert_toC(fTemp){
+		this.cTemp = ((fTemp -32 )*(5/9));
+		//return cTemp;
+		alert(cTemp);
+	}
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	</script>
+	<h3>Celcius Calc </h3>
+	<hr>
+	<input type="button" value="Refresh_meeee" onclick="location.reload()" />
+	<br />
+	<!-- no longer needed. convert does both in 1 click  
+	<input type="button" value="get Celcius" onclick="getFarenheit()" />
+	-->
+	<br />
+	<input type="button" value="Convert to (C)" onclick="convert(getFarenheit())" />
+</body>
+</html>
