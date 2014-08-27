@@ -4,6 +4,14 @@
 	<meta charset="utf-8"></meta>
 	<title>JS Encapsulation</title>
 	<script type="text/javascript">
+		function Cube(length, width, height){
+			function volume(a,b,c){
+				return a*b*c;
+			}
+			this.cube_volume = volume(length, width, height);
+		}
+
+		var crate = new Cube(2,3,4);
 
 	</script>
 </head>
@@ -14,6 +22,12 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	
+	<fieldset>Volume for Cube.  Using 2,3,4</fieldset>
+	<input type="button" value="using this." onclick="alert('Volume = ' + crate.cube_volume)" />
+	<br />
+	<!-- will not work. volume() is locked away within Cube().  -->
+	<input type="button" value="not using this." onclick="alert(volume(2,3,4))" />
+	<br />
+
 </body>
 </html>

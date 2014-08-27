@@ -4,12 +4,16 @@
 	<meta charset="utf-8"></meta>
 	<title>Farenheit</title>
 <script>
-	var question = prompt("Let me convert Celcius to Farenheit for you.  Enter a number: ");
-	var cTemp = question
+	function getCelcius(c){
+		this.cTemp = prompt("Let me convert Celcius to Farenheit for you.  Enter a number: ");
+		return cTemp;
+		//this.cTemp = c;
+	}
 	
-	function convert(question){
-		var fTemp = ((cTemp * 9)/5) + 32;
-		document.write(fTemp);
+	function convert(cTemp){
+		this.fTemp = ((cTemp * 9)/5) + 32;
+		//return fTemp;
+		alert(fTemp);
 	}
 </script>
 </head>
@@ -17,8 +21,14 @@
 	<script type="text/javascript">
 		
 	</script>
-
-
-<input type="button" value="Convert to (F)" onclick="convert()" />
+	<h3>Farenheit Calc </h3>
+	<hr>
+	<input type="button" value="Refresh_meeee" onclick="location.reload()" />
+	<br />
+	<!-- no longer needed. convert does both in 1 click  
+	<input type="button" value="get Celcius" onclick="getCelcius()" />
+	-->
+	<br />
+	<input type="button" value="Convert to (F)" onclick="convert(getCelcius())" />
 </body>
 </html>
