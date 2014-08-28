@@ -4,7 +4,15 @@
 	<meta charset="utf-8"></meta>
 	<title>JS listing 8.1 Parsing a JSON string</title>
 	<script type="text/javascript">
-
+		function jsonParse(){
+			var stringA = prompt("Enter JSON object");
+			var output = "";
+			myObject = JSON.parse(stringA);
+			for (i in myObject){
+				output += "Property: " + i + " = " + myObject[i] + '\n';
+			}
+			alert(output);
+		}
 	</script>
 </head>
 <body>
@@ -13,6 +21,8 @@
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
+	<br />
+	<input type="button" value="F5" onclick="jsonParse()" />
 	<br />
 	
 </body>
