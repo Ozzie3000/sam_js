@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS | JSON Methods</title>
+	<script type="text/javascript">
+		//var user = '{"username" : "Max1234","location" : "Espana","height" : 1.90}';
+		var user = {
+			"username" : "Max1234",
+			"location" : "Espana",
+			"height" : 1.90,
+			"setName":function(newName){
+				this.username=newName;
+			}
+		}
+
+		//var newName = prompt("Give me a new username");
+		
+		
+			var newname = prompt("Give me a new username");
+			user.setName(newname);
+		
+		
+	</script>
+</head>
+<body>
+	<h1>JSON Methods</h1>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="set a new user.name" onclick="ask()" /> 
+	<br />
+	<input type="button" value="show user.name" onclick="alert(user.username)" /> 
+	<br />
+
+
+	<input type="button" value="set name" onclick="user.setName()" /> 
+	<br />
+
+</body>
+</html>
