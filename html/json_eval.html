@@ -4,6 +4,11 @@
 	<meta charset="utf-8"></meta>
 	<title>JS | JSON eval</title>
 	<script type="text/javascript">
+	// how to convert JSON string into JS object
+	// var jsObject = eval ('(' + jsonObjectStringToBeConverted + ')');
+		var user = '{"username" : "Max1234","location" : "Espana","height" : 1.90}';
+		var anObject = eval ('(' + user + ')');
+
 
 	</script>
 </head>
@@ -13,6 +18,9 @@
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
+	<br />
+	<textfield>Alert the JS object from user the JSON object string:<br />var user = '{"username" : "Max1234","location" : "Espana","height" : 1.90}';<br/>var anObject = eval ('(' + user + ')');</textfield><br /><br />
+	<input type="button" value="show the JS object" onclick="alert(anObject.username)" />
 	<br />
 	
 </body>
