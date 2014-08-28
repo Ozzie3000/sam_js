@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS JSON</title>
+	<script type="text/javascript">
+	//example of how to write it:  
+		//var anObject = eval ('(' + jsonObjectString + ')');
+	var user = '{"username" : "Max1234","location" : "Espana","height" : 1.90}';
+	var anObject = eval ('(' + user + ')');
+
+	function evalor(){
+		alert(anObject.username);
+	}
+	function ask(){
+		this.response = "";
+		var response = prompt("pick from: \nusername, location, height \nand type it in.");
+		if(response == username){
+			response = 0;
+		} else if(response == location){
+			response = 1;
+		} else if(response == height){
+			response = 2;
+		}else{
+			alert("try again")
+		}
+		this.setResponse = function(newResponse){
+			this.response = newResponse;
+		}
+		//var anObject = eval ('(' + user + ')');
+		alert(this.response);
+
+	}
+	function question(){
+		this.response = "";
+		response = prompt("Give me");
+		this.setResponse = function(newResponse){
+			this.response = newResponse;
+		}
+	}
+	/*
+	function evalorB(stuff){
+		x = prompt("give me")
+		y = x.valueOf();
+		//return anObject.valueOf(x);
+		alert(anObject.valueOf(x));
+	}
+	*/
+
+	</script>
+</head>
+<body>
+	<h1>Who is JSON or is it Jason?  Haha</h1>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<textfield>user = '{"username" : "Max1234","location" : "Espana","height" : 1.90}'</textfield>
+	<br />
+	<input type="button" value="eval Something" onclick="alert(anObject.username)" />
+	<br />
+	<input type="button" value="eval Something w/ function call" onclick="evalor()" />
+	<br />
+	<input type="button" value="eval Something w/ function call. You pick" onclick="ask()" />
+	<br />
+	<input type="button" value="eval Something w/ function call. You pick" onclick="evalorB()" />
+	<br />
+</body>
+</html>
