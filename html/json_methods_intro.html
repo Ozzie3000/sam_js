@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JSON methods</title>
+	<script type="text/javascript">
+		/* create empty object
+		var myObject ={};
+		JS does not directly support associative arrays (think ruby hash), but JSON notation has somehing similar.
+		var sumObject = {"age":1,"height":1.9, "coolness":8};
+		*/
+
+		var user = {"username":"Jack123","location":"Cook islands","height":1.8, "setName":function(newName){this.username=newName}};
+		var sumperson = user.username;
+
+		var nuevoname = prompt("Give a new username");
+		user.setName(nuevoname);
+		
+	</script>
+</head>
+<body>
+	<h1>json methods</h1>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="alert var sumperson = user.username" onclick="alert(sumperson)" />
+	<br />
+	<input type="button" value="alert the new user.username" onclick="alert(user.username)" />
+</body>
+</html>
