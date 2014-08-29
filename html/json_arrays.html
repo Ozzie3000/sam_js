@@ -4,9 +4,11 @@
 	<meta charset="utf-8"></meta>
 	<title>JSON arrays</title>
 	<script type="text/javascript">
-		
-
-		
+	//an array
+		var listofbooksObject = {
+			"book_list":["Node","JS","html","Ruby on Rails"]
+		}
+	
 		
 	</script>
 </head>
@@ -16,10 +18,23 @@
 	<h3>a refresh button because i'm lazy.... ha ha</h3>
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
+	<textfield>var listofbooksObject = {
+			"book_list":["Node","JS","html","Ruby on Rails"]
+		}
+	</textfield>
+	<br /><br />
+	<textfield>
+		alert(listofbooksObject.book_list[0]);
+	</textfield>
 	<br />
-	<input type="button" value="" onclick="" />
+	<input type="button" value="array index[0]" onclick="alert(listofbooksObject.book_list[0])"  />
 	<br />
-	<input type="button" value="" onclick="" />
-
+	<br />
+	<textfield>
+		alert(listofbooksObject.book_list[1]);
+	</textfield>
+	<br />
+	<input type="button" value="array index[1]" onclick="alert(listofbooksObject.book_list[1])"  />
+	<br />
 </body>
 </html>
