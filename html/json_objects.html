@@ -22,9 +22,17 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	<input type="button" value="" onclick="" />
+	<texfield>
+		var listofbooksObject = {
+			"book_list":[{"title":"Node","author":"sumguy1"},
+			{"title":"JS","author":"sumguy2"},
+			{"title":"html","author":"sumguy3"},
+			{"title":"Ruby on Rails","author":"sumguy4"}]
+		}
+	</textfield><br /><br />
+	<input type="button" value="alert(listofbooksObject.book_list[0].author)" onclick="alert(listofbooksObject.book_list[0].author)" />
 	<br />
-	<input type="button" value="" onclick="" />
+	<input type="button" value="alert(listofbooksObject.book_list[0].title)" onclick="alert(listofbooksObject.book_list[0].title)" />
 	<br />
 	
 </body>
