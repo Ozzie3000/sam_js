@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS listing 9.1</title>
+	<script type="text/javascript">
+		function checkfrom(){
+			document.getElementById("form1").onSubmit = function(){
+				var submit_action = true;
+				if(document.getElementById("user").value ==""){
+					alert("Name must be filled out");
+					submit_action = false;
+				}
+				if(submit_action) alert("Thank for filling it out. Submitting form");
+				return submit_action;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1></h1>
+	
+	<h3>JS Listing 9.1 Canceling onSubmit default behavior</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="" onclick="" />
+	<br />
+	<input type="button" value="" onclick="" />
+	<br />
+	
+</body>
+</html>
