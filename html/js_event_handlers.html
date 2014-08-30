@@ -2,10 +2,20 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
+	<script type="text/javascript">
+		function buhTonAlert(){
+			alert("YES!! You clicked me!!!!");
+		}
+		//document.getElementById("buhTon1").onclick = buhTonAlert;
+	</script>
 	<title>JS event handlers not in body</title>
 </head>
 <body>
 	<h3>Event handler not in body of HTML</p>
-	
+	<input type="button" value="reFRESHER" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" id="buhTon1" value="yo click me already" onclick="document.getElementById('buhTon1').onclick = buhTonAlert" />
+
 </body>
 </html>
