@@ -4,7 +4,7 @@
 	<meta charset="utf-8"></meta>
 	<title>JS listing 9.1</title>
 	<script type="text/javascript">
-		function checkfrom(){
+		function checkform(){
 			document.getElementById("form1").onSubmit = function(){
 				var submit_action = true;
 				if(document.getElementById("user").value ==""){
@@ -15,6 +15,7 @@
 				return submit_action;
 			}
 		}
+		window.onload = checkform;
 	</script>
 </head>
 <body>
@@ -28,6 +29,12 @@
 	<br />
 	<input type="button" value="" onclick="" />
 	<br />
-	
+	<form id="form1">
+		Name: <input type="text" value="" name="username" id="user" />
+		[Required field]<br />
+		Phone: <input type="text" value="" name="telephone" id="phone" />
+		[Optional field]<br />
+		<input type="submit" />
+	</form>
 </body>
 </html>
