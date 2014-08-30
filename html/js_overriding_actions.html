@@ -19,6 +19,8 @@
 	<a href="https://www.amazon.com" id="linkB">Amazon.com</a>
 	<br />
 	<a href="https://www.amazon.com" id="linkC">Amazon.com</a>
+	<br />
+	<a href="https://www.amazon.com" id="linkD">Amazon.com</a>
 
 	<script>
 		document.getElementById("linkB").onclick = function(){
@@ -30,6 +32,12 @@
 		document.getElementById("linkC").onclick = function(){
 			 this.href = "https://www.ebay.com";
 			 return false;
+		}
+	</script>
+	<script>
+		document.getElementById("linkD").onclick = function(){
+			 this.href = "https://www.ebay.com";
+			 return confirm("Leaving and going to Ebay. Is that ok?");
 		}
 	</script>
 
