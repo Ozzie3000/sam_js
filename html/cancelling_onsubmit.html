@@ -5,9 +5,9 @@
 	<title>JS listing 9.1</title>
 	<script type="text/javascript">
 		function checkform(){
-			document.getElementById("form1").onSubmit = function(){
+			document.getElementById("form1").onsubmit = function(){
 				var submit_action = true;
-				if(document.getElementById("user").value ==""){
+				if(document.getElementById("user").value == ""){
 					alert("Name must be filled out");
 					submit_action = false;
 				}
@@ -29,6 +29,7 @@
 	<br />
 	<input type="button" value="" onclick="" />
 	<br />
+
 	<form id="form1">
 		Name: <input type="text" value="" name="username" id="user" />
 		[Required field]<br />
