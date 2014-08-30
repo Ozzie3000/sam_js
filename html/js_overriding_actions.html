@@ -2,10 +2,36 @@
 <html>
 <head>
 	<meta charset="utf-8"></meta>
+<!--	<script type="text/javascript">
+		document.getElementById("linkB").onclick = function(){
+			 this.href = "https://www.ebay.com";
+		}
+	</script>  must be at the button so it will load last -->
 	<title>JS overriding default actions</title>
 </head>
 <body>
-	<h3>S overriding default actions</h3>
-	
+	<h3>JS overriding default actions</h3>
+	<input type="button" value="Refresh the page" onclick="location.reload()" />
+	<hr>
+	<br>
+	<a href="https://www.amazon.com" id="linkA">Amazon.com</a>
+	<br />
+	<a href="https://www.amazon.com" id="linkB">Amazon.com</a>
+	<br />
+	<a href="https://www.amazon.com" id="linkC">Amazon.com</a>
+
+	<script>
+		document.getElementById("linkB").onclick = function(){
+			 this.href = "https://www.ebay.com";
+		}
+	</script>
+	<!-- will try and leave the page, but stay.  Does not work on right clicking  -->
+	<script>
+		document.getElementById("linkC").onclick = function(){
+			 this.href = "https://www.ebay.com";
+			 return false;
+		}
+	</script>
+
 </body>
 </html>
