@@ -7,8 +7,21 @@
 		/* gerneric stuff
 		myElement = document.getElementById("sumId");
 		myElement.onclick = function(e){stuff};
+		
+		unoElemente = document.getElementById("sumId");
+		/* Microsoft
+		unoElemente.onclick = function(e){
+			alert(window.event.type);
+		}
+		*********** Microsoft stuff***********
+		unoElemente.onclick = function(e){
+			alert(e.type);
+		}
+		unoElemente = document.getElementById("sumId");
+		unoElemente.onmouseover = function(e){
+			alert(e.type);
+		}
 		*/
-
 	</script>
 </head>
 <body>
@@ -18,10 +31,41 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	<input id="sumId" type="button" value="Alert sum sum"  />
+	<input id="sumId1" type="button" value="Alert event type: click me"  />
 	<br />
-	<input type="button" value=""  />
+	<input id="sumId2" type="button" value="Alert event type: mouse over"  />
+	<br />
+	<input id="sumId3" type="button" value="Alert event type: mouse out"  />
+	<br />
+	<input id="sumId4" type="button" value="Alert event type: n/a yet"  />
 	<br />
 	
+	<script type="text/javascript">
+		unoElemente = document.getElementById("sumId1");
+		unoElemente.onclick = function(e){
+			alert(e.type);
+		}
+
+		unoElemente = document.getElementById("sumId2");
+		unoElemente.onmouseover = function(e){
+			alert(e.type);
+		}
+
+		unoElemente = document.getElementById("sumId3");
+		unoElemente.onmouseout = function(e){
+			alert(e.type);
+		}
+
+		unoElemente = document.getElementById("sumId3");
+		unoElemente.onmouseout = function(e){
+			alert(e.type);
+		}
+
+		unoElemente = document.getElementById("sumId4");
+		unoElemente. = function(e){
+			alert(e.type);
+		}
+	</script>
+
 </body>
 </html>
