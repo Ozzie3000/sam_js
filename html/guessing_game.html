@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS _</title>
+	<script type="text/javascript">
+		function numberz(){
+			var rando = Math.round(Math.random()*500);
+			this.randoNum = rando;
+			
+			for (i=0; i<3; i++){
+				var guessA = prompt("Guess a number 0-500");
+				if(guessA == randoNum){
+					alert("Dude you are the man! "+randoNum+" was correct");
+				}else{
+					alert("Nope: "+guessA+" is incorrect");
+				}
+			}
+			alert(randoNum + " was the real number.");
+		}
+
+		function realNo(){
+			alert(randoNum + " was the real number.");
+		}
+	</script>
+</head>
+<body>
+	<h1>The guessing game.</h1>
+	<p>Instructions:</p>
+	<ul>
+		<li>I will think a number 0-500</li>
+		<li>You will get 3 guesses</li>
+		<li>If you don't get it in 3 guess you're dumb...so dumb...so dumb.</li>
+	</ul>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input type="button" value="Start!" onclick="numberz()" />
+	<br />
+	<input type="button" value="what is the rando number" onclick="realNo()" />
+	<br />
+	
+</body>
+</html>
