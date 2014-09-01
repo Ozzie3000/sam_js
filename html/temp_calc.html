@@ -17,12 +17,12 @@
 	function convert_toF(cTemp){
 		this.fTemp = ((cTemp * 9)/5) + 32;
 		//return fTemp;
-		alert(fTemp);
+		alert(fTemp+"\n: degrees Farenheit");
 	}
 	function convert_toC(fTemp){
 		this.cTemp = ((fTemp -32 )*(5/9));
 		//return cTemp;
-		alert(cTemp);
+		alert(cTemp+ "\n: degrees Celcius");
 	}
 </script>
 </head>
@@ -30,13 +30,13 @@
 	<script type="text/javascript">
 		
 	</script>
-	<h3>Celcius Calc </h3>
+	<h3>Celcius or Farenheit Calculator </h3>
 	<hr>
 	<input type="button" value="Refresh_meeee" onclick="location.reload()" />
 	<br /><br />
-	<input type="button" value="Convert to (C)" onclick="convert_toC(getFarenheit())" />
-	<br />
-	<input type="button" value="Convert to (F)" onclick="convert_toF(getCelcius())" />
+	<input type="button" value="Convert Farenheit to (C)" onclick="convert_toC(getFarenheit())" />
+	<br /><br />
+	<input type="button" value="Convert Celcius to (F)" onclick="convert_toF(getCelcius())" />
 
 </body>
 </html>
