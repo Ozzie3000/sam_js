@@ -4,17 +4,19 @@
 	<meta charset="utf-8"></meta>
 	<title>JS listing 9.2 Capturing onclick event properties</title>
 	<script type="text/javascript">
-		function showEvent(){
-			var message = "";
-			document.getElementById('buhTon1').onclick = function (e){
+	
+		function anEvent(){
+			var storage = "";
+			document.getElementById("buhton").onclick = function(e){
 				if (!e) var e = window.event;
 				for(i in e){
-					out += i + " = " e[i] + "<br />";
+					storage += i + " = " e[i] + "<br />";
 				}
-				document.getElementById("target").innerHTML = message;
+				document.getElementById("target").innerHTML = storage;
 			}
 		}
-		window.onload = showEvent;
+		window.onload = anEvent;
+		
 	</script>
 </head>
 <body>
@@ -24,10 +26,24 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	<input type="button" value="" onclick="" />
+	<input id="buhton" type="button" value="Show event properties when clicked" />
 	<br />
-	<input type="button" value="" onclick="" />
 	<br />
-	
+	<div id="target"></div>
+<!--
+	<script type="text/javascript">
+		function anEvent(){
+			var storage = "";
+			document.getElementById("buhton").onclick = function(e){
+				if (!e) var e = window.event;
+				for(i in e){
+					storage += i + " = " e[i] + "<br />";
+				}
+				document.getElementById("target").innerHTML = storage;
+			}
+		}
+		window.onload = anEvent;
+	</script>
+-->
 </body>
 </html>
