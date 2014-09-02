@@ -5,15 +5,19 @@
 	<title>JS _</title>
 	<script type="text/javascript">
 		function numberz(guessA){
-			var guessA = prompt("Guess your first number");
+			var guessA = prompt("Give me your 3 guesses. One");
+			var guessB = prompt("Give me your 3 guesses. Two");
+			var guessC = prompt("Give me your 3 guesses. Three");
 			this.g_a = guessA;
-			var rando = Math.round(Math.random()*500);
+			var rando = Math.round(Math.random()*20);
 			this.randoNum = rando;
 			for (i=0; i<3; i++){
-				if(g_a == randoNum){
+				if(guessA == randoNum || guessB == randoNum || guessC == randoNum){
 					alert("Dude you are the man! "+randoNum+" was correct");
+					break;
 				}else {
-					alert("Nope "+g_a+" is incorrect");
+					alert("All your guesses were incorrect: \n"+guessA+"\n"+guessB+"\n"+guessC+"\n");
+					break;
 				}
 			}
 		}
@@ -36,6 +40,7 @@
 					message = "The traffic light must not be working.  Treat it as a 4-way stop.";
 					alert(message);
 			}
+		}
 
 	</script>
 </head>
