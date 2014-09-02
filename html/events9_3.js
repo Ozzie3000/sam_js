@@ -1,14 +1,14 @@
-function addEventHandler(element,evenType,handlerFunction){
+function addEventHandler(element,eventType,handlerFunction){
 	if (element.addEventListener){
-		element.addEventListener(evenType,handlerFunction,false);
+		element.addEventListener(eventType,handlerFunction,false);
 	} else if (element.attachEvent) {
 		element.attachEvent ('on'+eventType,handlerFunction);
 	}
 }
 
-function removeEventHandler(element,evenType,handlerFunction){
+function removeEventHandler(element,eventType,handlerFunction){
 	if (element.removeEventListener){
-		element.removeEventListener(evenType,handlerFunction,false);
+		element.removeEventListener(eventType,handlerFunction,false);
 	} else if (element.detachEvent) {
 		element.detachEvent ('on'+eventType,handlerFunction);
 	}
