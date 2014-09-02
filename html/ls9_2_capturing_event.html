@@ -4,7 +4,7 @@
 	<meta charset="utf-8"></meta>
 	<title>JS listing 9.2 Capturing onclick event properties</title>
 	<script type="text/javascript">
-	
+	/*
 		function anEvent(){
 			var storage = "";
 			document.getElementById("buhton").onclick = function(e){
@@ -16,6 +16,18 @@
 			}
 		}
 		window.onload = anEvent;
+		*/
+		function showEvent(){
+			var out = "";
+			document.getElementById("myButton").onClick = function(e){
+				if (!e) var e = window.event;
+				for(i in e){
+					out += i + " = " e[i] + "<br />";
+				}
+				document.getElementById("output").innerHTML = out;
+			}
+		}
+		window.onload = showEvent;
 		
 	</script>
 </head>
@@ -30,6 +42,12 @@
 	<br />
 	<br />
 	<div id="target"></div>
+	<br />
+	<input id="myButton" type="button" value="Show event properties when clicked" />
+	<br />
+	<br />
+	<div id="output"></div>
+
 <!--
 	<script type="text/javascript">
 		function anEvent(){
