@@ -29,14 +29,25 @@ function removeOnClickB(){
 	removeEventHandler(document.getElementById('buttonB'),'click',appendText);
 }
 
+function removeOnClickC(){
+	removeEventHandler(document.getElementById('buttonC'),'mouseover',appendText);
+}
+
+function removeOnClickD(){
+	removeEventHandler(document.getElementById('buttonD'),'mouseout',appendText);
+}
 function reset(){
 	addEventHandler(document.getElementById('buttonA'),'click',appendText);
 	addEventHandler(document.getElementById('buttonB'),'click',appendText);
+	addEventHandler(document.getElementById('buttonC'),'mouseover',appendText);
+	addEventHandler(document.getElementById('buttonD'),'mouseout',appendText);
 }
 
 window.onload = function(){
 	addEventHandler(document.getElementById('button-a'),'click',removeOnClickA);
 	addEventHandler(document.getElementById('button-b'),'click',removeOnClickB);
+	addEventHandler(document.getElementById('button-c'),'mouseover',removeOnClickC);
+	addEventHandler(document.getElementById('button-d'),'mouseout',removeOnClickD);
 	addEventHandler(document.getElementById('reset'),'click',reset);
 	reset();
 }
