@@ -13,3 +13,17 @@ function removeEventHandler(element,evenType,handlerFunction){
 		element.detachEvent ('on'+eventType,handlerFunction);
 	}
 }
+
+function appendText(e){
+	if (!e) var e = window.event;
+	var element = (e.target) ? e.target : e.srcElement;
+	document.getElementById('div1').innerHTML += element.id + "<br />";
+}
+
+function removeOnClickA(){
+	removeEventHandler(document.getElementById('buttonA'),'click',appendText);
+}
+
+function removeOnClickb(){
+	removeEventHandler(document.getElementById('buttonB'),'click',appendText);
+}
