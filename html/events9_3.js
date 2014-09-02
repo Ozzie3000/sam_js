@@ -24,6 +24,18 @@ function removeOnClickA(){
 	removeEventHandler(document.getElementById('buttonA'),'click',appendText);
 }
 
-function removeOnClickb(){
+function removeOnClickB(){
 	removeEventHandler(document.getElementById('buttonB'),'click',appendText);
+}
+
+function reset(){
+	addEventHandler(document.getElementById('buttonA'),'click',appendText);
+	addEventHandler(document.getElementById('buttonB'),'click',appendText);
+}
+
+window.onload = function(){
+	addEventHandler(document.getElementById('button-a'),'click',removeOnClickA);
+	addEventHandler(document.getElementById('button-b'),'click',removeOnClickB);
+	addEventHandler(document.getElementById('reset'),'click',reset);
+	reset();
 }
