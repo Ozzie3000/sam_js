@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JS Croswer-Broswer implementation</title>
+	<script type="text/javascript">
+		//generic stuff
+		function addEventHandler(element,eventType,hanlerFunction){
+			if(element.addEventListener){
+				element.addEventListener(eventType,hanlerFunction,false);
+			}else if(element.attachEvent{
+				element.attachEvent ('on'+eventType,addEventHandler);
+			}
+		}
+
+		var eventType = 'click';
+		var Mybutton = document.getElementById('button01');
+		addEventHandler(Mybutton,eventType,myFunction);
+	</script>
+</head>
+<body>
+	<h1>Adding event listeners cross-browser style</h1>
+	
+	<h3>a refresh button because i'm lazy.... ha ha</h3>
+	<input type="button" value="F5" onclick="location.reload()" />
+	<hr>
+	<br />
+	<input id="button01" type="button" value="button01" />
+	<br />
+	<input type="button" value=""  />
+	<br />
+	
+</body>
+</html>
