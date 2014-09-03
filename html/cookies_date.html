@@ -20,8 +20,10 @@
 	<br />
 
 
-<script type="text/javascript">
-		
+	<script type="text/javascript">
+		var cookieDate = new Date ();
+		document.cookie = "username=bob;expires=" + cookieDate.toUTCString();
+		document.write(cookieDate);
 	</script>
 </body>
 </html>
