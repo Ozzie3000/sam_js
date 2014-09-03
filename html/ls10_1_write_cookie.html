@@ -4,7 +4,23 @@
 	<meta charset="utf-8"></meta>
 	<title>JS Listing 10.1 Function to Write a cookie</title>
 	<script type="text/javascript">
-
+		function createCookie(name, value, days, path, domain, secure){
+			if (days){
+				var date = new Date();
+				date.setTime(date.getTime() + (days*24*60*60*1000));
+				var expires = date.toGMTString();
+			}
+			else var expires = "";
+			cookieString = name + "=" + escape (value);
+			if (expires) cookieString+= "; expires =" + expires;
+			if (path) cookieString+= "; path =" + escape (path);
+			if (domain) cookieString+= "; domain =" + escape (domain);
+			if (secure) cookieString+= "; secure";
+			document.cookie = cookieString;
+		}
+		createCookie("username","Sam Winchester", 5);
+		createCookie("location","USA", 5);
+		createCookie("status","fullmember", 5);
 	</script>
 </head>
 <body>
@@ -13,10 +29,12 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	<input type="button" value="" onclick="" />
+	<input type="button" value="hi" onclick="alert('hi')" />
 	<br />
 	<input type="button" value="" onclick="" />
 	<br />
+
+
 	
 </body>
 </html>
