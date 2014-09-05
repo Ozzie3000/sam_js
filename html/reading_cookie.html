@@ -4,7 +4,8 @@
 	<meta charset="utf-8"></meta>
 	<title>JS reading a cookie</title>
 	<script type="text/javascript">
-
+		var stringy = "John#Jacob#Jingle#Heisenberg";
+		var arrara = stringy.split('#');
 	</script>
 </head>
 <body>
@@ -14,9 +15,13 @@
 	<input type="button" value="F5" onclick="location.reload()" />
 	<hr>
 	<br />
-	<input type="button" value="" onclick="" />
+	<input type="button" value="show string" onclick="alert(stringy)" />
 	<br />
-	<input type="button" value="" onclick="" />
+	<input type="button" value="show array w/ split" onclick="alert(arrara)" />
+	<br />
+	<input type="button" value="array [0]" onclick="alert(arrara[0])" />
+	<br />
+	<input type="button" value="array [1]" onclick="alert(arrara[1])" />
 	<br />
 	
 </body>
