@@ -6,6 +6,7 @@
 	<script type="text/javascript">
 		var stringy = "John#Jacob#Jingle#Heisenberg";
 		var arrara = stringy.split('#');
+		var crumbs = document.cookie.split(';');
 	</script>
 </head>
 <body>
@@ -23,6 +24,11 @@
 	<br />
 	<input type="button" value="array [1]" onclick="alert(arrara[1])" />
 	<br />
-	
+	<br />
+	<!-- nothing to show we haven't created a cookie yet  -->
+	<input type="button" value="show document.cookie.split(';')" onclick="alert(crumbs)" />
+	<br />
+
+
 </body>
 </html>
